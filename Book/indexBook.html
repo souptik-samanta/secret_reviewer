@@ -9,43 +9,41 @@
 <body>
 
   <button class="top-right-button" onclick="redirectToHome()">Go to Main Page</button>
-  <div class="slack-box" onclick="redirectSlack()">
-    His Slack
-</div>
 
-<script>
-    function redirectSlack() {
-        window.location.href = "https://hackclub.slack.com/team/U07EY4D1VGB";
-    }
-</script> 
-
+  <div class="box-container">
+    <div class="box" id="astro" onclick="redirectAstro()">
+      Manga by Tylar-his Slack
+    </div>
+    <div class="box" id="klumey" onclick="redirectKlumey()">
+      Cover by Klumey-her Slack
+    </div>
+  </div>
 
   <div class="book-container">
     <div id="left-arrow" class="arrow">←</div>
     <div class="book">
-
-    <div class="page">
-      <img src="../galary/img/img6.png" alt="Page 1" width="480" height="720" >
-    </div>
-    <div class="page">
-      <img src="../galary/img/img3.png" alt="Page 1" width="720" height="720" >
-    </div>
       <div class="page">
-        <img src="../img/img1.jpg" alt="Page 1" width="1000" height="1500">
+        <img src="../galary/img/img6.png" alt="Page 1" width="480" height="720">
       </div>
       <div class="page">
-        <img src="../img/img2.jpg" alt="Page 2" width="405" height="720">
+        <img src="../galary/img/img3.png" alt="Page 2" width="720" height="720">
       </div>
-      <div class="page" >
-        <img src="../img/img3.jpg" alt="Page 3" width="432" height="636" >
+      <div class="page">
+        <img src="../img/img1.jpg" alt="Page 3" width="1000" height="1500">
       </div>
+      <div class="page">
+        <img src="../img/img2.jpg" alt="Page 4" width="405" height="720">
       </div>
+      <div class="page">
+        <img src="../img/img3.jpg" alt="Page 5" width="432" height="636">
+      </div>
+    </div>
     <div id="right-arrow" class="arrow">→</div>
   </div>
 
   <script src="./scriptBook.js"></script>
-  <script src="./redirect.js"></script> <!-- For redirecting -->
-  <script src="../security.js"></script> <!-- For Security reasons -->
+  <script src="./redirect.js"></script>
+  <script src="../security.js"></script>
   <script>src:"../scriptRedirect.js"</script>
 </body>
 </html>
