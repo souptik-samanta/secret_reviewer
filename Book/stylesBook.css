@@ -4,14 +4,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url('../imgbgmanga.png'); 
   background-color: #64707a;
   margin: 0;
-  position: relative;  /* Needed to position the boxes */
-  background-image: url('../imgbgmanga.png'); /* Path to your background image */
-  background-size: cover; /* This will make the image cover the whole page */
-  background-position: center; /* Centers the background image */
-  background-attachment: fixed; /* Keeps the background fixed when scrolling */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  position: relative;  
+  
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
 }
 
 /* Top right button */
