@@ -1,26 +1,24 @@
-/* Style the main page button */
-.main-page-button {
-    position: fixed;
-    top: 10px;
+/* Style for the button */
+.top-right-button {
+    position: absolute;
+    top: 20px;
     right: 20px;
-    z-index: 1000;
-}
-
-.main-page-button a {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #002;
     color: white;
-    text-decoration: none;
-    font-size: 18px;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.main-page-button a:hover {
-    background-color: #0056b3;
+.top-right-button:hover {
+    background-color: #005;
+    transform: scale(1.1);
 }
 
-/* Style for the gallery container */
+
 #gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -28,15 +26,23 @@
     align-items: center;
     overflow-y: scroll;
     height: 100vh;
-    background-color: #333; /* Default background color */
-    padding: 10px;
+    background-color: #333;
+    padding: 10px;  
 }
 
-/* Style for each image container */
+
+.image-frame {
+    margin: 30px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
 .image-frame {
     width: 392px;
     height: 698px;
-    margin: 15px;
+    margin: 5px;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -48,13 +54,11 @@
     border: 5px solid white;
 }
 
-/* Hover effect with glowing */
+
 .image-frame:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Scrollbar styling */
 #gallery-container::-webkit-scrollbar {
     width: 10px;
 }
@@ -71,7 +75,7 @@
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
     .image-frame {
-        width: 300px;
-        height: 500px;
+        max-width: 69200px;
+        max-height: 400px;
     }
 }

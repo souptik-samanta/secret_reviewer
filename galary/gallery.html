@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Scroll Gallery</title>
+    <title>Scroll Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="main-page-button">
-        <a href="../index.html">Main Page</a>
-    </div>
+    <button class="top-right-button" onclick="redirectToHome()">Go to Main Page</button>
 
     <div id="gallery-container"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
+    <script src="./redirect.js"></script> <!-- For redirecting -->
+    <script src="../security.js"></script> <!-- For Security reasons -->
 </body>
 </html>
