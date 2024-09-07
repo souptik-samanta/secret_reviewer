@@ -14,8 +14,8 @@ body {
   }
   
   .book {
-    max-width: 300px;
-    max-height: 500px;
+    width: 392px;
+    height: 698px;
     position: relative;
   }
   
