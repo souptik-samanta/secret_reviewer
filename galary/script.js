@@ -4,7 +4,8 @@ const images = [
     { src: '../galary/img/img2.png', width: 392, height: 698 },
     { src: '../galary/img/img3.png', width: 720, height: 720 },
     { src: '../galary/img/img4.png', width: 720, height: 720 },
-    { src: '../galary/img/img5.png', width: 720, height: 720 }
+    { src: '../galary/img/img5.png', width: 720, height: 720 },
+    { src: '../galary/img/img6.png', width: 720, height: 720 }
 ];
 
 // Infinite scrolling variables
