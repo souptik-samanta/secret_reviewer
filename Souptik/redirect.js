@@ -1,3 +1,3 @@
-        function redirectToHome() {
-            window.location.href = '../HomePage.html'; // Redirect to home page
-        }
+function redirectToHome() {
+    window.location.href = '../index.html'; // Redirect to home page
+}
