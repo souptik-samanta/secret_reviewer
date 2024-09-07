@@ -1,4 +1,4 @@
-// Sample list of images (replace with actual image URLs)
+
 const images = [
     { src: '../galary/img/img1.png', width: 392, height: 698 },
     { src: '../galary/img/img2.png', width: 392, height: 698 },
@@ -11,17 +11,17 @@ const images = [
 let currentImageIndex = 0;
 const galleryContainer = document.getElementById('gallery-container');
 
-// Function to load images dynamically
+
 function loadImages() {
-    for (let i = 0; i < 5; i++) {  // Load 5 images at a time
+    for (let i = 0; i < 5; i++) { 
         if (currentImageIndex >= images.length) {
-            currentImageIndex = 0;  // Reset to the beginning for infinite effect
+            currentImageIndex = 0;  
         }
 
         const imageFrame = document.createElement('div');
         imageFrame.classList.add('image-frame');
 
-        // Set width and height for each image based on its specific size
+
         const imgData = images[currentImageIndex];
         imageFrame.style.width = `${imgData.width}px`;
         imageFrame.style.height = `${imgData.height}px`;
@@ -30,11 +30,11 @@ function loadImages() {
         img.src = imgData.src;
         img.style.width = '100%';
         img.style.height = '100%';
-        img.style.objectFit = 'cover'; // Make sure it fits nicely
+        img.style.objectFit = 'cover'; 
 
         imageFrame.appendChild(img);
 
-        // Add Three.js frame effect here
+      
         addThreeJsFrame(imageFrame, imgData.width, imgData.height);
 
         galleryContainer.appendChild(imageFrame);
@@ -42,17 +42,16 @@ function loadImages() {
     }
 }
 
-// Infinite scroll listener
 window.addEventListener('scroll', () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         loadImages();
     }
 });
 
-// Initial load
+
 loadImages();
 
-// Adding a simple Three.js frame to each image with dynamic sizing
+
 function addThreeJsFrame(container, width, height) {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
@@ -60,7 +59,7 @@ function addThreeJsFrame(container, width, height) {
     renderer.setSize(width, height);
     container.appendChild(renderer.domElement);
 
-    const geometry = new THREE.BoxGeometry(width - 10, height - 10, 10); // Frame fits the image
+    const geometry = new THREE.BoxGeometry(width - 10, height - 10, 10); 
     const material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
     const frame = new THREE.Mesh(geometry, material);
     scene.add(frame);

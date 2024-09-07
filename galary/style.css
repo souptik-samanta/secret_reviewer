@@ -1,4 +1,11 @@
-/* Style for the button */
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;  /* Allows the boxes to be on the left and gallery on the right */
+}
+
 .top-right-button {
     position: absolute;
     top: 20px;
@@ -18,8 +25,42 @@
     transform: scale(1.1);
 }
 
+/* Container for the Klumey and Astro boxes */
+.box-container {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.box {
+    width: 180px;
+    height: 80px;
+    background-color: #4A154B;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+    background-color: #7F3B8A;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+    z-index: 100;
+}
+
+/* Gallery Container */
 #gallery-container {
+    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,24 +68,15 @@
     overflow-y: scroll;
     height: 100vh;
     background-color: #333;
-    padding: 10px;  
+    padding: 10px;
+    margin-left: 220px;  /* Space for the box-container on the left */
 }
 
-
 .image-frame {
-    margin: 30px; 
+    margin: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-
-
-.image-frame {
     width: 392px;
     height: 698px;
-    margin: 5px;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-frame img {
@@ -54,11 +86,12 @@
     border: 5px solid white;
 }
 
-
 .image-frame:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Scrollbar customization */
 #gallery-container::-webkit-scrollbar {
     width: 10px;
 }
@@ -75,7 +108,10 @@
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
     .image-frame {
-        max-width: 69200px;
-        max-height: 400px;
+        width: 100%;
+        height: auto;
+    }
+    .box-container {
+        left: 10px;
     }
 }
